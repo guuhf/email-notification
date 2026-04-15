@@ -45,7 +45,7 @@ public class EmailService {
             context.setVariable("status", "NOTIFIED");
             context.setVariable("description", taskDTO.getDescription());
 
-            String template = templateEngine.process("notificacao", context);
+            String template = templateEngine.process("notification", context);
             mimeMessageHelper.setText(template, true);
 
             javaMailSender.send(message);
